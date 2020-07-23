@@ -15,12 +15,14 @@ app.use(bodyParser.json());
 //connect database
 require('./database');
 
+//call app from Routes
 app.use(AuthRouter);
 
 app.use(UserRouter);
 
 app.use(PostRouter);
 
+//run server
 app.listen(PORT, () => {
     console.log('Server is running in port:' + PORT);
 })
